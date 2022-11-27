@@ -1,5 +1,6 @@
 package com.example.taskmanager.ui.home.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -28,6 +29,11 @@ class TaskAdapter() :
 
     override fun onBindViewHolder(holder: TasViewHolder, position: Int) {
         holder.bind(tasks.get(position))
+        if (position % 2 ==0){
+            holder.itemView.setBackgroundColor(Color.BLACK)
+        } else  {
+            holder.itemView.setBackgroundColor(Color.WHITE)
+        }
     }
 
     fun addTask(task: Task) {

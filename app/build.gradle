@@ -67,4 +67,7 @@ dependencies {
 
     // To use Kotlin annotation processing tool (kapt)
     kapt "androidx.room:room-compiler:$room_version"
+
+    //Lottie
+    implementation 'com.airbnb.android:lottie:2.8.0'
 }

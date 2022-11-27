@@ -42,7 +42,7 @@ class OnBoardingAdapter(val onClick: (view: View) -> Unit) :
             binding.skip.isVisible = adapterPosition != arrayList.lastIndex
             binding.tvTitle.text = onBoard.title
             binding.tvDesk.text = onBoard.desc
-            Glide.with(binding.image).load(onBoard.image).into(binding.image)
+            onBoard.image?.let { binding.image.setAnimation(it) }
             binding.btnStar.setOnClickListener {
                 onClick(binding.btnStar)
             }
