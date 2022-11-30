@@ -37,4 +37,8 @@
         android:name="com.example.taskmanager.ui.onBoard.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.fourthmfirsthm.ui.auth.AuthFragment"
+        android:label="AuthFragment" />
 </navigation>

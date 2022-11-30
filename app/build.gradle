@@ -72,4 +72,8 @@ dependencies {
 
     //Lottie
     implementation 'com.airbnb.android:lottie:2.8.0'
+
+    // FireBase
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
 }

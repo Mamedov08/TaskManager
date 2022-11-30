@@ -9,6 +9,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.taskmanager.data.local.Pref
 import com.example.taskmanager.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,6 +51,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        if (Firebase.auth.currentUser == null){
+            navController.navigate(R.id.authFragment)
+        }
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             navView.isVisible = bottomFragments.contains(destination.id)
 
