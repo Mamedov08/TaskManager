@@ -29,9 +29,9 @@ class TaskAdapter() :
 
     override fun onBindViewHolder(holder: TasViewHolder, position: Int) {
         holder.bind(tasks.get(position))
-        if (position % 2 ==0){
+        if (position % 2 == 0) {
             holder.itemView.setBackgroundColor(Color.BLACK)
-        } else  {
+        } else {
             holder.itemView.setBackgroundColor(Color.WHITE)
         }
     }
@@ -64,6 +64,7 @@ class TaskAdapter() :
         fun bind(task: Task) {
             binding.tvTitle.text = task.title
             binding.tvDeck.text = task.desk
+
 
             //иницализируем наш лонк клик
             itemView.setOnLongClickListener {
